@@ -9,8 +9,9 @@ $('button').click(function () {
 function check(x) {
     if (count < 42) {
         if (count % 2 == 0) {
-            $('h2').text("Player 2's Move");
+
             if ($(x).attr('class') === undefined || $(x).attr('class') === null) {
+                $('h2').text("Player 2's Move");
                 console.log($(x).attr('class'));
                 $(x).addClass("btn-danger");
                 count++;
@@ -25,8 +26,9 @@ function check(x) {
             }
         }
         else {
-            $('h2').text("Player 2's Move");
+
             if ($(x).attr('class') === undefined || $(x).attr('class') === null) {
+                $('h2').text("Player 1's Move");
                 console.log($(x).attr('class'));
                 $(x).addClass("btn-primary");
                 count++;
@@ -40,6 +42,6 @@ function check(x) {
         }
     }
     else {
-        $('body').fadeout(3000);
+        $('h2').text("GAME OVER REFRESH BROWSER FOR NEW GAME");
     }
 }
